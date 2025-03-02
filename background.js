@@ -1,6 +1,6 @@
 // background.js - Updated with delete functionality
 // Google Gemini API Key
-const GEMINI_API_KEY = "AIzaSyBL9iqmbejei2ib_AldiXHH1AZXwon-YX8";
+const GEMINI_API_KEY = "[insert gemini API key]";
 
 // Function to capture a screenshot of the current tab
 async function captureScreenshot() {
