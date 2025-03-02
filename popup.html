@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Initiative</title>
+    <style>
+        body {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: small;
+            width: 400px;
+            padding: 10px;
+            background-color: #FFF8DE;
+        }
+        .wholecontainer {
+            background: #D0E8C5;
+            border-radius: 10px;
+            border-top-width: 5px;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        #title {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #194a77;
+            font-size:x-large;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .note {
+            border-bottom: 1px solid #ccc;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:12px;
+            padding: 20px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        #analyzeBtn {
+            background-color: #98d59f;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: medium;
+            color: rgb(17, 58, 17);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 70px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 15px;
+            width: 75%;
+        }
+        #analyzeBtn:hover {
+            background-color: #76c985;
+        }
+        #loadingIndicator {
+            display: none;
+            text-align: center;
+            margin: 10px 0;
+        }
+        #latestAnalysis {
+            background-color: #D0E8C5;
+            color: #194a77;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            display: none;
+        }
+        #saveOptions {
+            display: none;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .actionBtn {
+            padding: 6px 12px;
+            margin: 0 5px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #saveBtn {
+            background-color: #34a853;
+            color: white;
+            border: none;
+        }
+        #discardBtn {
+            background-color: #ea4335;
+            color: white;
+            border: none;
+        }
+        .deleteBtn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ea4335;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .deleteBtn:hover {
+            background-color: #d62516;
+        }
+        .notificationBar {
+            display: none;
+            padding: 8px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .success {
+            color: #137333;
+        }
+        .error {
+            background-color: #fce8e6;
+            color: #c5221f;
+        }
+        h3 {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+        .emptyState {
+            color: #5f6368;
+            text-align: center;
+            margin: 20px 0;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wholecontainer">
+        
+        <h3 id="title">Impact Initiative</h3>
+
+        <div id="notification" class="notificationBar"></div>
+        
+        <button id="analyzeBtn">Analyze Current Page</button>
+        
+        <div id="loadingIndicator">
+            Processing screenshot... Please wait.
+        </div>
+        
+        <div id="latestAnalysis"></div>
+        
+        <div id="saveOptions">
+            <button id="saveBtn" class="actionBtn">Save Note</button>
+            <button id="discardBtn" class="actionBtn">Discard</button>
+        </div>
+        
+        <h4>Saved Notes</h4>
+        <div id="notesContainer"></div>
+        
+        <script src="popup.js"></script>
+    </div>
+</body>
+</html>
